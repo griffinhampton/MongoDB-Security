@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB Security Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MongoDB Security Template</h1>
+            <p>Secure data collection and storage</p>
+        </header>
+
+        <main>
+            <div id="alert" class="alert" style="display: none;"></div>
+            
+            <form id="dataForm" class="form-container">
+                <h2>Submit Your Information</h2>
+                
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required maxlength="100">
+                    <div class="error-message" id="name-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required maxlength="255">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" required maxlength="1000" rows="5" 
+                              placeholder="Enter your message (10-1000 characters)"></textarea>
+                    <div class="character-count">
+                        <span id="char-count">0</span>/1000 characters
+                    </div>
+                    <div class="error-message" id="message-error"></div>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span class="btn-text">Submit</span>
+                    <span class="btn-loading" style="display: none;">Submitting...</span>
+                </button>
+            </form>
+
+            <div class="info-section">
+                <h3>Security Features</h3>
+                <ul>
+                    <li>Input validation and sanitization</li>
+                    <li>Rate limiting protection</li>
+                    <li>Secure headers with Helmet.js</li>
+                    <li>MongoDB injection prevention</li>
+                    <li>Data encryption in transit</li>
+                </ul>
+            </div>
+
+            <div class="submissions-section">
+                <h3>Recent Submissions</h3>
+                <button id="loadSubmissions" class="secondary-btn">Load Recent Submissions</button>
+                <div id="submissions-list"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 MongoDB Security Template</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
