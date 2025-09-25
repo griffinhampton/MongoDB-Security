@@ -22,6 +22,17 @@ A secure MongoDB template that allows users to input data through a web interfac
 - MongoDB (local installation or MongoDB Atlas)
 - npm or yarn package manager
 
+## Quick Start (Demo Mode)
+
+For quick testing without MongoDB installation:
+
+```bash
+npm install
+npm run demo
+```
+
+This runs the application in demo mode with in-memory storage. Visit `http://localhost:3000` to see the application in action.
+
 ## Installation
 
 1. **Clone the repository**:

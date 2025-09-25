@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "demo": "node server-demo.js",
     "dev": "nodemon server.js",
+    "dev-demo": "nodemon server-demo.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["mongodb", "security", "template", "express"],
